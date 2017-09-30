@@ -1,6 +1,8 @@
 package war;
 
 public class Card {
-	public enum Rank rank;
-	public enum Suit suit;
+	
+	public Rank rank = Rank.ACE.EIGHT;
+	public Suit suit = Suit.CLUBS.DIAMONDS;
+	
 }
