@@ -13,8 +13,13 @@ public class Runner {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("sup");
-		System.out.print("3rd commit");
+		
+		String rank = Rank.ACE.stringOfRank();
+		String suit = Suit.CLUBS.stringOfSuit();
+		
+		
+		System.out.println(rank);
+		System.out.print(suit);
 	}
 
 }
