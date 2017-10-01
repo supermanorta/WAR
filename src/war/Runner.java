@@ -19,7 +19,8 @@ public class Runner {
 		deck.shuffleDeckContents();
 		deck.printDeckContents();
 		
+		System.out.println("You drew the: " + deck.drawCardFromDeck());
 		
 	}
- 
+	
 }
