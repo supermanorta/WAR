@@ -20,8 +20,10 @@ public class Deck {
 		
 		for (Suit s : Suit.values()) {
 		    for (Rank r : Rank.values()) {
+		    	
 		    	card = new Card(r, s);
-		    	cardDeck.add(card);	
+		    	cardDeck.add(card);
+		    	
 		    }
 		}
 	}
@@ -29,7 +31,9 @@ public class Deck {
 	public void printDeckContents(){
 		
 		for(Card card: cardDeck){
+			
 			System.out.println(card);
+			
 		}
 	} 
 	
