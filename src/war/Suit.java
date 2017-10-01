@@ -17,5 +17,5 @@ public enum Suit {
 	public String stringOfSuit(){
 		return suit;
 	}
-
+ 
 }

@@ -11,7 +11,7 @@ public class Card {
 		setCardRank(null);
 		setCardSuit(null);
 	}
-	
+	 
 	public Card(Rank cardRank, Suit cardSuit){
 		
 		setCardSuit(cardSuit);

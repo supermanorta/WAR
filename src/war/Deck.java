@@ -25,7 +25,7 @@ public class Deck {
 		    }
 		}
 	}
-	
+	 
 	public void printDeckContents(){
 		
 		for(Card card: cardDeck){

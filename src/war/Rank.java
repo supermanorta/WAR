@@ -1,6 +1,6 @@
 package war;
 public enum Rank {
-	
+	 
 	TWO(2, "Two"),
 	THREE(3, "Three"),
 	FOUR(4, "Four"),
