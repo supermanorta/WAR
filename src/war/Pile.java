@@ -8,7 +8,7 @@ public class Pile extends Deck{
 	
 	}
 	
-	public void addCardToTop(Card drawnCard){
+	public void addCardToTopOfPile(Card drawnCard){
 		
 		cardDeck.add(drawnCard);
 	}

@@ -4,7 +4,7 @@ public class GameEngine {
 	
 	public Player playerOne = new Player("Jack");
 	public Player playerTwo = new Player("Jill");
-	
+
 	public Deck mainDeck = new Deck();
 
 	public void setUpGame(){
@@ -30,25 +30,23 @@ public class GameEngine {
 		for(int i = 0; i < 52; i++){
 			
 			if(i % 2 == 0){
-				playerOne.playersMainPile.addCardToTop(mainDeck.drawCardFromTop());
+				playerOne.playersMainPile.addCardToTopOfPile(mainDeck.drawCardFromTop());
 			}
 			
 			else{
-				playerTwo.playersMainPile.addCardToTop(mainDeck.drawCardFromTop());
+				playerTwo.playersMainPile.addCardToTopOfPile(mainDeck.drawCardFromTop());
 			}
 		}
 	}
 	
 	public void addToFaceUpPile(Player player){
 		
-		player.faceUpPile.addCardToTop(player.playersMainPile.drawCardFromTop());
-		
-		
+		player.faceUpPile.addCardToTopOfPile(player.playersMainPile.drawCardFromTop());
 	}
 	
 	public void addToFaceDownPile(Player player){
 	
-		player.faceDownPile.addCardToTop(player.playersMainPile.drawCardFromTop());
+		player.faceDownPile.addCardToTopOfPile(player.playersMainPile.drawCardFromTop());
 	}
 	
 	
