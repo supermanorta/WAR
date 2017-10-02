@@ -40,6 +40,7 @@ public class Deck {
 	public void shuffleDeckContents(){
 		
 		Collections.shuffle(cardDeck);
+		
 	}
 	
 	public Card drawCardFromTop(){
@@ -48,10 +49,5 @@ public class Deck {
 		cardDeck.remove(0);
 		
 		return topCardFromDeck;
-	}
-	
-	public void addCardToBottom(Card wonCard){
-		
-		cardDeck.add(cardDeck.size(), wonCard);
 	}
 }
