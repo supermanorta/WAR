@@ -42,11 +42,16 @@ public class Deck {
 		Collections.shuffle(cardDeck);
 	}
 	
-	public Card drawCardFromDeck(){
+	public Card drawCardFromTop(){
 		
 		Card topCardFromDeck = cardDeck.get(0);
 		cardDeck.remove(0);
 		
 		return topCardFromDeck;
+	}
+	
+	public void addCardToBottom(Card wonCard){
+		
+		cardDeck.add(cardDeck.size(), wonCard);
 	}
 }
