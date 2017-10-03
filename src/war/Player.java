@@ -25,6 +25,7 @@ public class Player {
 		this.faceDownPile    = new Pile();
 		this.faceUpPile      = new Pile();
 	}
+	
 
 
 }
