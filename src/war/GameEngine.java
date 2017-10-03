@@ -4,7 +4,7 @@ public class GameEngine {
 	
 	public Player playerOne = new Player("Jack");
 	public Player playerTwo = new Player("Jill");
-
+	public final int orginalDeckSize  = 52;
 	public Deck mainDeck = new Deck();
 
 	public void setUpGame(){
@@ -16,7 +16,7 @@ public class GameEngine {
 		playerOne.playersMainPile.printDeckContents();
 		System.out.println();
 		playerTwo.playersMainPile.printDeckContents();
-		
+		System.out.println();
 		addToFaceUpPile(playerOne);
 		playerOne.faceUpPile.printDeckContents();
 		addToFaceUpPile(playerTwo);
@@ -26,13 +26,12 @@ public class GameEngine {
 	}
 	
 	public void dealCardsToPlayers(Player playerOne, Player playerTwo){
-		
-		for(int i = 0; i < 52; i++){
+		// i replaced with card or something
+		for(int singleCard = 0; singleCard < orginalDeckSize; singleCard++){//52 = FINALwhatEver
 			
-			if(i % 2 == 0){
+			if(singleCard % 2 == 0){
 				playerOne.playersMainPile.addCardToTopOfPile(mainDeck.drawCardFromTop());
 			}
-			
 			else{
 				playerTwo.playersMainPile.addCardToTopOfPile(mainDeck.drawCardFromTop());
 			}
