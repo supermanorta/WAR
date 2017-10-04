@@ -13,7 +13,6 @@ import java.util.Collections;
 public class Deck {
 	
 	ArrayList <Card> cardDeck = new ArrayList<Card>();
-	
 	public void fillDeckContents() {
 		
 		Card card;		
