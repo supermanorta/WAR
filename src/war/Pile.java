@@ -13,5 +13,10 @@ public class Pile extends Deck{
 		cardDeck.add(drawnCard);
 	}
 	
+	public int sizeOfPile() {
+		
+		return cardDeck.size();
+	}
+	
 
 }

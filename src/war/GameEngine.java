@@ -1,13 +1,16 @@
 package war;
 
-public class GameEngine {
+public interface GameEngine {
 	
-	public Player playerOne = new Player("Jack");
+	/*public Player playerOne = new Player("Jack");
 	public Player playerTwo = new Player("Jill");
 	public final int orginalDeckSize  = 52;
+	public Deck mainDeck = new Deck();*/
 	public Deck mainDeck = new Deck();
-
-	public void setUpGame(){
+	public void setUpGame();
+	public void roundResult();
+	public int gameResult();
+	/*{
 		
 		mainDeck.fillDeckContents();
 		mainDeck.shuffleDeckContents();
@@ -22,10 +25,10 @@ public class GameEngine {
 		addToFaceUpPile(playerTwo);
 		playerTwo.faceUpPile.printDeckContents();
 		
-		
-	}
+	}*/
 	
-	public void dealCardsToPlayers(Player playerOne, Player playerTwo){
+	public void dealCardsToPlayers(Player playerOne, Player playerTwo);
+	/*{
 		// i replaced with card or something
 		for(int singleCard = 0; singleCard < orginalDeckSize; singleCard++){//52 = FINALwhatEver
 			
@@ -36,18 +39,15 @@ public class GameEngine {
 				playerTwo.playersMainPile.addCardToTopOfPile(mainDeck.drawCardFromTop());
 			}
 		}
-	}
+	}*/
 	
-	public void addToFaceUpPile(Player player){
+	public void addToFaceUpPile(Player player);/*{
 		
 		player.faceUpPile.addCardToTopOfPile(player.playersMainPile.drawCardFromTop());
 	}
-	
-	public void addToFaceDownPile(Player player){
+	*/
+	public void addToFaceDownPile(Player player);/*{
 	
 		player.faceDownPile.addCardToTopOfPile(player.playersMainPile.drawCardFromTop());
-	}
-	
-	
-
+	}*/
 }

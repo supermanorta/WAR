@@ -13,7 +13,8 @@ public class Runner {
 	 */
 	public static void main(String[] args) {
 		
-		GameEngine gameOne = new GameEngine();
+		//GameEngine gameOne = new GameEngine();
+		GameOne gameOne = new GameOne();
 		
 		gameOne.setUpGame();
 		

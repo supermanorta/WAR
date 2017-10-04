@@ -19,18 +19,15 @@ public enum Rank {
 	private final String rank;
 	
 	Rank(int value, String rank){
-		
 		this.value = value;
 		this.rank = rank;
 	}
 	
-	public int valueOfRank(){
-		
+	public int getValueOfRank(){
 		return value;
 	}
 	
-	public String stringOfRank(){
-		
+	public String getStringOfRank(){
 		return rank;
 	}
 

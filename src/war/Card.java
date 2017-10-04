@@ -10,7 +10,7 @@ public class Card {
 		
 		setCardSuit(cardSuit);
 		setCardRank(cardRank);
-		
+		setCardValue(cardRank.getValueOfRank() );
 	}
 	
 	public Rank getCardRank() {
@@ -45,7 +45,7 @@ public class Card {
 	
 	public String toString(){
 		
-		return cardRank.stringOfRank() + " of "  + cardSuit.stringOfSuit();
+		return cardRank.getStringOfRank() + " of "  + cardSuit.stringOfSuit();
 		
 	}
 }
