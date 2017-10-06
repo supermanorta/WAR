@@ -6,9 +6,7 @@ public class Player {
 	static int score;  
 	Pile playersMainPile; // again these are prefab names, this could also be gamePile or pulled From pile etc
 	Pile faceUpPile;
-
 	Pile faceDownPile;    // or burnPile;
-	
 	public Player(String neoName){
 		
 		this.name = neoName;
@@ -32,17 +30,33 @@ public class Player {
 	public int getScore(){
 		return this.score;
 	}
-	public void setMainPile( Pile mainPile) {
-		this.playersMainPile = mainPile;
+	
+	public void setPlayersMainPile(Pile playersMainPile) {
+		this.playersMainPile = playersMainPile;
 	}
 
 	public Pile getPlayersMainPile() {
 		return playersMainPile;
 	}
-
-	public void setPlayersMainPile(Pile playersMainPile) {
-		this.playersMainPile = playersMainPile;
+	public void getPlayersMainPileCardSetCardBottom(Pile winner) {
+		this.playersMainPile.addCardToBottom( winner.drawCardFromTop()  );
 	}
+	public int getPlayersMainPileValue() {
+		return this.playersMainPile.drawCardFromTop().getCardValue();
+//		return this.playersMainPile.drawCardFromTop().getCardValue();
+	}
+	
+	/*
+	 public Card getPlayerCard() {
+		return null;
+	}
+	*/
+	
+	public Card getPlayersMainCard() {
+		return this.playersMainPile.drawCardFromTop();
+	}
+	
+	
 
 	public int getSizeOfFaceUpPile() {
 		//playerOne.getFaceUpPile().sizeOfPile()
@@ -59,7 +73,13 @@ public class Player {
 	public void setFaceUpPile(Pile faceUpPile) {
 		this.faceUpPile = faceUpPile;
 	}
-
+	/***
+	 * Takes a Card and adds it ot the bottom of a face Up Pile 
+	 * @param card
+	 */
+	public void addCardToFaceUpPile(Card card) {
+		this.faceUpPile.addCardToBottom(card);
+	}
 	public int getFaceDownPileValue() {
 		return faceDownPile.drawCardFromTop().getCardValue();
 	}

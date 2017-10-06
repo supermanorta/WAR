@@ -1,15 +1,19 @@
 package war;
 
+import java.util.ArrayList;
+
 public interface GameEngine {
 	
 	/*public Player playerOne = new Player("Jack");
 	public Player playerTwo = new Player("Jill");
 	public final int orginalDeckSize  = 52;
 	public Deck mainDeck = new Deck();*/
-	public Deck mainDeck = new Deck();
+	public static Deck mainDeck = new Deck();
+	static ArrayList<Card> warDeck = new ArrayList<Card>();
+	
 	public void setUpGame();
 	public void roundResult();
-	public int gameResult();
+	public void gameResult(int roundWinner);
 	/*{
 		
 				
