@@ -45,10 +45,14 @@ public class Deck {
 	public Card drawCardFromTop(){
 		
 		// Card topCardFromDeck = cardDeck.get(0);
+		Card topCardFromDeck=null;
 		int retroSize = cardDeck.size()-1;
-		Card topCardFromDeck = cardDeck.get( retroSize );
-		cardDeck.remove(retroSize);
-		
+		if( retroSize == -1 ) {
+			Card topCardFromDeckr = cardDeck.get( retroSize+1 );
+			cardDeck.remove(retroSize);
+		}else {
+			topCardFromDeck = cardDeck.get( retroSize );
+		}
 		return topCardFromDeck;
 	}
 	
